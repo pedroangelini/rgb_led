@@ -14,8 +14,8 @@ frame_start = 0
 
 def show() -> None:
     global leds
-    print(chr(27) + "[2J")
-    print("".join(str(x) for x in leds))
+    print(chr(27) + "[2J", end="", flush=True)
+    print("".join(str(x) for x in leds), flush=True)
 
 
 def setup() -> None:
